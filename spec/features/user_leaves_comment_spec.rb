@@ -11,6 +11,6 @@ feature 'user leaves a comment' do
     fill_in 'Comment', :with => 'first comment'
     click_on('Post')
 
-    expect(page).to have_content 'first comment'
+    expect(page).to have_content 'Comment Posted'
   end
 end
