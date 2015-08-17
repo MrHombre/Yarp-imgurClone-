@@ -24,7 +24,17 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def upvote
+    @post = Post.find(params[:id])
+
+    if @post.save
+      flash[:success] = "Upvoted"
+    end
+    redirect_to :back
+  end
+
   private
+
   def post_params
     params.require(:post).permit(:title, :image_url)
   end
