@@ -10,6 +10,26 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
  */
+
+ @import "normalize-rails";
+ @import "bourbon";
+ @import "base/grid-settings";
+ @import "neat";
+ @import "base/base";
+ @import "refills/flashes";
+ @import "font-awesome";
+ @import "layouts/header";
+ @import "layouts/form";
+ @import "layouts/posts";
+ @import "layouts/post-show";
+ @import "layouts/comments";
+
+
+
+
+ 
+
+
+
