@@ -28,6 +28,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
 
     if @post.save
+      @post.upvote_by current_user
       flash[:success] = "Upvoted"
     end
     redirect_to :back
