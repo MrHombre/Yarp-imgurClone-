@@ -34,6 +34,16 @@ class PostsController < ApplicationController
     redirect_to :back
   end
 
+  def downvote
+    @post = Post.find(params[:id])
+
+    if @post.save
+      @post.downvote_by current_user
+      flash[:success] = "Downvoted"
+    end
+    redirect_to :back
+  end
+
   private
 
   def post_params
